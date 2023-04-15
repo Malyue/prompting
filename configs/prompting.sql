@@ -13,6 +13,7 @@ CREATE TABLE `t_user`(
     `phone` varchar(16),
     `introduction` varchar(255),
     `avatar` varchar(255),
+    `role` tinyint(2) DEFAULT 0 COMMENT '0:普通用户 1:管理员',
     `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
     `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY (`id`),
